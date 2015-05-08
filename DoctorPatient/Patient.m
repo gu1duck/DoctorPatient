@@ -28,7 +28,7 @@
     self = [super init];
     if (self){
         self.name = name;
-        _traits = @{@"age":age, @"SSN":ssn};
+        _traits = @{@"age":age, @"SSN":ssn, @"symptom":@"missing head"};
         
     }
     return self;
@@ -56,7 +56,7 @@
     [doctor requestProperty: @"age" FromPatient:self];
     [doctor requestProperty: @"SSN" FromPatient:self];
     if ([doctor confirmInfoOfType: @"SSN" forPatient: self]){
-        NSLog(@"%@: Your SSN is valid. Becasue this isn't Vancouver I will take you as a patient", doctor.name);
+        NSLog(@"%@: Your SSN is valid. Becasue this isn't Vancouver I will take you as a patient.", doctor.name);
     } else {
         NSLog(@"%@: Your SSN is invalid. You need to leave.\n\n", doctor.name);
         [doctor removePatient:self];
@@ -64,12 +64,13 @@
 }
 
 -(void)requestSpecialtyFromDoctor:(Doctor *) doctor{
-    NSLog(@"%@: What's your specialty, %@", self.name, doctor.name);
-    NSLog(@"%@: Its %@", doctor.name, doctor.specialty);
+    NSLog(@"%@: What's your specialty, %@?", self.name, doctor.name);
+    NSLog(@"%@: Its %@.", doctor.name, doctor.specialty);
 }
 
 -(void)requestPerscriptionFromDoctor:(Doctor *) doctor{
     NSLog(@"%@: I need some medication for my %@.",self.name, _traits[@"symptom"]);
+    [doctor dispenseMedication:self forSymptom: _traits[@"symptom"]];
 }
     
 

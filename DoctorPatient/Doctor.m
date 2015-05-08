@@ -56,4 +56,14 @@
     [_myPatients removeObjectForKey:patient.name];
 }
 
+-(void)dispenseMedication: (Patient *) patient forSymptom:(NSString *) symptom{
+    if (_myPatients[patient.name]){
+        [self modifyRecordForThisPatient:patient WithTrait:symptom ForName:@"symptom"];
+        NSLog(@"Well for that you need %@", @"MEDICINE");
+    } else {
+        NSLog(@"You're actually not my patient. Goodbye.");
+    }
+    
+}
+
 @end

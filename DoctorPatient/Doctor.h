@@ -20,4 +20,5 @@
 -(void)modifyRecordForThisPatient: (Patient*) patient WithTrait: (id) trait ForName: (NSString *) traitName;
 -(Boolean) confirmInfoOfType: (NSString *) type forPatient: (Patient *) patient;
 -(void)removePatient: (Patient *) patient;
+-(void)dispenseMedication: (Patient *) patient forSymptom:(NSString *) symptom;
 @end

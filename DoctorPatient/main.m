@@ -22,6 +22,9 @@ int main(int argc, const char * argv[]) {
         [fred visitDoctor:doctor];
         [bob requestPerscriptionFromDoctor:doctor];
         
+        [bob requestPerscriptionFromDoctor:doctor];
+        [fred requestPerscriptionFromDoctor:doctor];
+        
     }
     return 0;
 }
