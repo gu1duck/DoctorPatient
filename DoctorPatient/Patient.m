@@ -50,20 +50,24 @@
 
 }
 
--(void)visitDoctorWithName: (NSString *) name andSpecialty:(NSString *) specialty{
-    Doctor *doctor = [[Doctor alloc] initWithName:name andSpecialty:specialty];
+-(void)visitDoctor: (Doctor *) doctor{
     [doctor greetPatient:self];
     [self greetDoctor:doctor];
+    [self requestSpecialtyFromDoctor:doctor];
     [doctor requestProperty: @"age" FromPatient:self];
     [doctor requestProperty: @"SSN" FromPatient:self];
-    if ([doctor confirmInfoOfType: @"SSN" forPatient: self]){
-        NSLog(@"Valid SSN");
-    } else {
-        NSLog(@"Your SSN is invalid. You need to leave");
+    if (![doctor confirmInfoOfType: @"SSN" forPatient: self]){
+        NSLog(@"Your SSN is invalid. You need to leave\n\n");
+        
     }
 }
 
--(void)requestMedication: (Doctor *){
+-(void)requestSpecialtyFromDoctor:(Doctor *) doctor{
+    NSLog(@"%@: What's your specialty, %@", self.name, doctor.name);
+    NSLog(@"%@: Its %@", doctor.name, doctor.specialty);
+}
+
+//-(void)requestPerscriptionFromDoctor:(Doctor)
     
 
 @end

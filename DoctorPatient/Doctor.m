@@ -40,7 +40,7 @@
     }
     NSMutableDictionary* thisPatient = [_myPatients objectForKey: patient.name];
     [thisPatient setObject:trait forKey:traitName];
-    NSLog(@"%@", thisPatient);                                                   //DEBUG
+    //NSLog(@"%@", thisPatient);                                                   //DEBUG
 }
 
 -(Boolean) confirmInfoOfType: (NSString *) type forPatient: (Patient *) patient{

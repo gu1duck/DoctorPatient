@@ -16,6 +16,6 @@
 -(instancetype)initWithName:(NSString *)name andAge: (NSNumber *) age andSSN: (NSNumber *) ssn;
 -(void)greetDoctor:(Doctor *)doctor;
 -(void)giveProperty:(NSString *)property toDoctor:(Doctor*) doctor;
--(void)visitDoctorWithName: (NSString *) name andSpecialty:(NSString *) specialty;
+-(void)visitDoctor: (Doctor *) doctor;
 
 @end
