@@ -10,6 +10,7 @@
 		3F02F3331AFBDB75008EE435 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 3F02F3321AFBDB75008EE435 /* main.m */; };
 		3F02F33B1AFBDB9C008EE435 /* Doctor.m in Sources */ = {isa = PBXBuildFile; fileRef = 3F02F33A1AFBDB9C008EE435 /* Doctor.m */; };
 		3F02F33E1AFBDBD3008EE435 /* Patient.m in Sources */ = {isa = PBXBuildFile; fileRef = 3F02F33D1AFBDBD3008EE435 /* Patient.m */; };
+		3F02F35A1AFC892D008EE435 /* PerscriptionDatabase.m in Sources */ = {isa = PBXBuildFile; fileRef = 3F02F3591AFC892D008EE435 /* PerscriptionDatabase.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
@@ -31,6 +32,8 @@
 		3F02F33A1AFBDB9C008EE435 /* Doctor.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Doctor.m; sourceTree = "<group>"; };
 		3F02F33C1AFBDBD3008EE435 /* Patient.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Patient.h; sourceTree = "<group>"; };
 		3F02F33D1AFBDBD3008EE435 /* Patient.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Patient.m; sourceTree = "<group>"; };
+		3F02F3581AFC892D008EE435 /* PerscriptionDatabase.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PerscriptionDatabase.h; sourceTree = "<group>"; };
+		3F02F3591AFC892D008EE435 /* PerscriptionDatabase.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PerscriptionDatabase.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -66,6 +69,8 @@
 				3F02F3321AFBDB75008EE435 /* main.m */,
 				3F02F3391AFBDB9C008EE435 /* Doctor.h */,
 				3F02F33A1AFBDB9C008EE435 /* Doctor.m */,
+				3F02F3581AFC892D008EE435 /* PerscriptionDatabase.h */,
+				3F02F3591AFC892D008EE435 /* PerscriptionDatabase.m */,
 				3F02F33C1AFBDBD3008EE435 /* Patient.h */,
 				3F02F33D1AFBDBD3008EE435 /* Patient.m */,
 			);
@@ -128,6 +133,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				3F02F35A1AFC892D008EE435 /* PerscriptionDatabase.m in Sources */,
 				3F02F33E1AFBDBD3008EE435 /* Patient.m in Sources */,
 				3F02F33B1AFBDB9C008EE435 /* Doctor.m in Sources */,
 				3F02F3331AFBDB75008EE435 /* main.m in Sources */,
@@ -247,6 +253,7 @@
 				3F02F3381AFBDB75008EE435 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
