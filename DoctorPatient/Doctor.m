@@ -33,23 +33,27 @@
 }
 
 -(void)modifyRecordForThisPatient: (Patient*) patient WithTrait: (id) trait ForName: (NSString *) traitName{
-    id existingRecord = [_myPatients objectForKey: patient.name];
+    id existingRecord = _myPatients[patient.name];
     if (existingRecord == nil){
         NSMutableDictionary *newPatient = [[NSMutableDictionary alloc] init];
         [_myPatients setObject:newPatient forKey: patient.name];
     }
-    NSMutableDictionary* thisPatient = [_myPatients objectForKey: patient.name];
+    NSMutableDictionary* thisPatient = _myPatients[patient.name];
     [thisPatient setObject:trait forKey:traitName];
     //NSLog(@"%@", thisPatient);                                                   //DEBUG
 }
 
 -(Boolean) confirmInfoOfType: (NSString *) type forPatient: (Patient *) patient{
-    NSMutableDictionary *patientRecord = [_myPatients objectForKey:patient.name];
-    if ([patientRecord objectForKey:type] != nil){
+    NSMutableDictionary *patientRecord = _myPatients[patient.name];
+    if (patientRecord[type] != nil){
         return true;
     } else {
         return false;
     }
+}
+
+-(void)removePatient: (Patient *) patient{
+    [_myPatients removeObjectForKey:patient.name];
 }
 
 @end

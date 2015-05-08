@@ -19,4 +19,5 @@
 -(void)requestProperty:(NSString *) property FromPatient:(Patient *) patient;
 -(void)modifyRecordForThisPatient: (Patient*) patient WithTrait: (id) trait ForName: (NSString *) traitName;
 -(Boolean) confirmInfoOfType: (NSString *) type forPatient: (Patient *) patient;
+-(void)removePatient: (Patient *) patient;
 @end

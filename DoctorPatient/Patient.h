@@ -17,5 +17,6 @@
 -(void)greetDoctor:(Doctor *)doctor;
 -(void)giveProperty:(NSString *)property toDoctor:(Doctor*) doctor;
 -(void)visitDoctor: (Doctor *) doctor;
+-(void)requestPerscriptionFromDoctor:(Doctor *) doctor;
 
 @end

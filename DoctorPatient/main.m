@@ -20,6 +20,7 @@ int main(int argc, const char * argv[]) {
         Patient *fred = [[Patient alloc] initWithName:@"Fred" andAge:@35 andSSN:@123456];
         
         [fred visitDoctor:doctor];
+        [bob requestPerscriptionFromDoctor:doctor];
         
     }
     return 0;
