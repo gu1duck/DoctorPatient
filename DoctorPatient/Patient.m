@@ -56,7 +56,7 @@
     [doctor requestProperty: @"age" FromPatient:self];
     [doctor requestProperty: @"SSN" FromPatient:self];
     if ([doctor confirmInfoOfType: @"SSN" forPatient: self]){
-        NSLog(@"%@: Your SSN is valid. Becasue this isn't Vancouver I will take you as a patient.", doctor.name);
+        NSLog(@"%@: Your SSN is valid. Becasue this isn't Vancouver I will take you as a patient.\n\n", doctor.name);
     } else {
         NSLog(@"%@: Your SSN is invalid. You need to leave.\n\n", doctor.name);
         [doctor removePatient:self];
