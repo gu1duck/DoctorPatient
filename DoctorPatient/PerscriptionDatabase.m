@@ -21,6 +21,14 @@
     }
     return self;
 }
+-(NSString *) perscriptionForSymptom:(NSString *) symptom{
+    return _perscriptionsBySymptom[symptom];
+}
 
+-(void) storePerscription: (NSString *) perscription forPatient: (NSString *) patient{
+    [_perscriptionsByPatient setObject:perscription forKey:patient];
+    NSLog(@"The Internet: Perscription, %@, assigned to %@", _perscriptionsByPatient[patient], patient);
+    
+}
 
 @end

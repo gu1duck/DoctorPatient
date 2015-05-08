@@ -10,4 +10,8 @@
 
 @interface PerscriptionDatabase : NSObject
 
+-(NSString *) perscriptionForSymptom:(NSString *) symptom;
+-(void) storePerscription: (NSString *) perscription forPatient: (NSString *) patient;
+
+
 @end

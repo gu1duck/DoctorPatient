@@ -8,9 +8,11 @@
 
 #import "Doctor.h"
 #import "Patient.h"
+#import "PerscriptionDatabase.h"
 
 @implementation Doctor{
     NSMutableDictionary* _myPatients;
+    PerscriptionDatabase* _database;
 }
 
 -(instancetype)initWithName: (NSString *) name andSpecialty: (NSString *) specialty{
@@ -19,6 +21,8 @@
         self.name = name;
         self.specialty = specialty;
         _myPatients = [[NSMutableDictionary alloc] init];
+        _database = [[PerscriptionDatabase alloc] init];
+        
     }
     return self;
 }
@@ -59,7 +63,9 @@
 -(void)dispenseMedication: (Patient *) patient forSymptom:(NSString *) symptom{
     if (_myPatients[patient.name]){
         [self modifyRecordForThisPatient:patient WithTrait:symptom ForName:@"symptom"];
-        NSLog(@"Well for that you need %@", @"MEDICINE\n\n");
+        NSString* perscription = [_database perscriptionForSymptom: symptom];
+        NSLog(@"Well for that you need %@\n\n", perscription);
+        [_database storePerscription:perscription forPatient:patient.name];
     } else {
         NSLog(@"You're actually not my patient. Goodbye.\n\n");
     }
